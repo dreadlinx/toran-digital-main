@@ -181,11 +181,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item active" data-target="mega-web" href="../web-design/">
                   Website Design
@@ -281,13 +281,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle">
+<button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list">
+<div class="mobile-services-list" id="mobileServicesList">
 <a href="../web-design/">Website Design</a>
 <a href="../mobile-apps/">Mobile Apps</a>
 <a href="../seo-marketing/">SEO &amp; Google Ads</a>
@@ -321,7 +321,7 @@
     <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
       <!-- New Post 1: Vehicle Wrap Maintenance -->
       <a class="service-card card-tactile" href="vehicle-wrap-maintenance-guide-south-africa/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Vehicle wrap maintenance and care guide" src="../assets/vehicle branding/IMG-20250114-WA0247.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Vehicle wrap maintenance and care guide" src="../assets/vehicle branding/IMG-20250114-WA0247.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1280" height="960">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Fleet Care Guide</span>
@@ -335,7 +335,7 @@
 
       <!-- New Post 2: Next.js vs WordPress -->
       <a class="service-card card-tactile" href="nextjs-vs-wordpress-johannesburg-enterprises/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Next.js versus WordPress comparison" src="../assets/website images/eliteinnovation.co.za.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Next.js versus WordPress comparison" src="../assets/website images/eliteinnovation.co.za.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1910" height="937">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Full-Stack Web</span>
@@ -349,7 +349,7 @@
 
       <!-- New Post 3: React Native vs Flutter -->
       <a class="service-card card-tactile" href="react-native-vs-flutter-south-africa/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="React Native versus Flutter mobile app development" src="../assets/Native android development/denny-muller-HfWA-Axq6Ek-unsplash.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="React Native versus Flutter mobile app development" src="../assets/Native android development/denny-muller-HfWA-Axq6Ek-unsplash.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1920" height="1280">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Mobile Engineering</span>
@@ -363,7 +363,7 @@
 
       <!-- New Post 4: Google Ads vs Local SEO -->
       <a class="service-card card-tactile" href="google-ads-vs-local-seo-gauteng/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Google Ads versus Local SEO for Gauteng businesses" src="../assets/on page seo/seo_analytics.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Google Ads versus Local SEO for Gauteng businesses" src="../assets/on page seo/seo_analytics.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="604" height="350">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Search Growth</span>
@@ -376,7 +376,7 @@
       </a>
 
       <a class="service-card" href="website-design-benoni-what-to-include/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Website design in Benoni showcase" src="../assets/website images/eliteinnovation.co.za.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Website design in Benoni showcase" src="../assets/website images/eliteinnovation.co.za.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1910" height="937">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Web Design Guide</span>
@@ -388,7 +388,7 @@
         </div>
       </a>
       <a class="service-card" href="mobile-app-cost-south-africa/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Mobile app development in South Africa" src="../assets/Native android development/denny-muller-HfWA-Axq6Ek-unsplash.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Mobile app development in South Africa" src="../assets/Native android development/denny-muller-HfWA-Axq6Ek-unsplash.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1920" height="1280">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">App Development</span>
@@ -400,7 +400,7 @@
         </div>
       </a>
       <a class="service-card" href="full-wrap-vs-partial-vehicle-branding/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Full vehicle wrap versus partial branding" src="../assets/vehicle branding/IMG-20250114-WA0196.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Full vehicle wrap versus partial branding" src="../assets/vehicle branding/IMG-20250114-WA0196.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1280" height="960">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Vehicle Branding</span>
@@ -412,7 +412,7 @@
         </div>
       </a>
       <a class="service-card" href="capture-creative-vs-toran-digital-benoni/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Capture Creative versus Toran Digital Benoni" src="../assets/about_team.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Capture Creative versus Toran Digital Benoni" src="../assets/about_team.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1024" height="1024">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Agency Comparison</span>
@@ -424,7 +424,7 @@
         </div>
       </a>
       <a class="service-card" href="website-cost-johannesburg/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="How much does a website cost in Johannesburg" src="../assets/website images/boldandbeauty.co.za.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="How much does a website cost in Johannesburg" src="../assets/website images/boldandbeauty.co.za.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1902" height="932">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Pricing Breakdown</span>
@@ -436,7 +436,7 @@
         </div>
       </a>
       <a class="service-card" href="seo-guide-johannesburg-businesses/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Local SEO guide for Johannesburg businesses" src="../assets/on page seo/seo_analytics.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Local SEO guide for Johannesburg businesses" src="../assets/on page seo/seo_analytics.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="604" height="350">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Local SEO Guide</span>
@@ -448,7 +448,7 @@
         </div>
       </a>
       <a class="service-card" href="vehicle-branding-roi/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="Vehicle branding ROI in Johannesburg" src="../assets/vehicle branding/IMG-20250114-WA0205.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="Vehicle branding ROI in Johannesburg" src="../assets/vehicle branding/IMG-20250114-WA0205.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="1280" height="960">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">ROI Analysis</span>
@@ -460,7 +460,7 @@
         </div>
       </a>
       <a class="service-card" href="dstv-signal-problems/" style="display: flex; flex-direction: column; padding: 0; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); text-decoration: none; color: inherit; overflow: hidden; background: #fff;">
-        <img alt="DSTV signal problems and repair in Gauteng" src="../assets/dstv installation images/IMG-20260513-WA0269.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async">
+        <img alt="DSTV signal problems and repair in Gauteng" src="../assets/dstv installation images/IMG-20260513-WA0269.webp" style="width: 100%; height: 210px; object-fit: cover; border-bottom: 2px solid var(--dark-900);" loading="lazy" decoding="async" width="720" height="1280">
         <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">DSTV Troubleshooting</span>

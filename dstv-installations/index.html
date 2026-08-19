@@ -284,11 +284,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item" data-target="mega-web" href="../web-design/">
                   Website Design
@@ -384,13 +384,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle open">
+<button class="mobile-nav-link mobile-services-toggle open" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list open">
+<div class="mobile-services-list open" id="mobileServicesList">
 <a href="../web-design/" style="">Website Design</a>
 <a href="../mobile-apps/" style="">Mobile Apps</a>
 <a href="../seo-marketing/" style="">SEO &amp; Google Ads</a>
@@ -434,7 +434,7 @@
 </div>
 <div class="hero-showcase">
 <div class="showcase-card showcase-main">
-<img alt="DSTV Installation Showcase" fetchpriority="high" src="../assets/dstv installation images/IMG-20260513-WA0269.webp"/ decoding="async">
+<img alt="DSTV Installation Showcase" fetchpriority="high" src="../assets/dstv installation images/IMG-20260513-WA0269.webp"/ decoding="async" width="720" height="1280">
 <span class="showcase-label">Precision TV Wall Mounting</span>
 </div>
 </div>
@@ -563,23 +563,23 @@
 </div>
 <div class="faq-grid" style="display:flex; flex-direction:column; gap: 0.75rem; margin-top: 2.5rem; max-width: 800px;">
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Do you do same-day DSTV installations?</button>
+<button aria-expanded="false" class="faq-question" type="button">Do you do same-day DSTV installations?</button>
 <div class="faq-answer"><p>Yes, where possible. WhatsApp us in the morning and we'll do our best to get someone out to you the same day. Evenings and weekends are available by arrangement.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">What areas do you cover?</button>
+<button aria-expanded="false" class="faq-question" type="button">What areas do you cover?</button>
 <div class="faq-answer"><p>We cover the East Rand (Benoni, Boksburg, Germiston, Kempton Park, Brakpan, Springs) and greater Johannesburg including Sandton, Edenvale, and Bedfordview. Not sure if we cover your area? Just WhatsApp us.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Do I need to supply the bracket for TV mounting?</button>
+<button aria-expanded="false" class="faq-question" type="button">Do I need to supply the bracket for TV mounting?</button>
 <div class="faq-answer"><p>No — we supply standard brackets as part of the service. If you have a specific bracket already, we can use that too. Just let us know when booking.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Can you fix my "No Signal" error on the same visit?</button>
+<button aria-expanded="false" class="faq-question" type="button">Can you fix my "No Signal" error on the same visit?</button>
 <div class="faq-answer"><p>In most cases, yes. The majority of signal problems are caused by a misaligned dish or a damaged LNB, which we carry spares for. Complex underground cable faults may need a follow-up.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">How do I book a visit?</button>
+<button aria-expanded="false" class="faq-question" type="button">How do I book a visit?</button>
 <div class="faq-answer"><p>Easiest way is to WhatsApp us on 069 621 9479. Tell us your area, what you need done, and we'll confirm a time that works for you.</p></div>
 </div>
 </div>

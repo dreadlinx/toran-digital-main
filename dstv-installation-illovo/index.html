@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  
+
   <!-- Primary SEO Meta Tags -->
   <title>Illovo DSTV Installation & CCTV Security | Toran Digital</title>
   <meta name="description" content="Accredited DSTV installations, TV wall mounting, and commercial IP CCTV camera systems in Illovo. Same-day dispatch with certified signal technicians."/>
@@ -190,11 +190,11 @@
 
           <!-- Services Mega Dropdown -->
           <div class="nav-dropdown">
-            <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+            <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Capabilities
               <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="mega-dropdown">
+            <div class="mega-dropdown" id="capabilities-menu">
               <div class="mega-dropdown-left">
                 <a class="mega-item active" data-target="mega-web" href="../web-design/">
                   Web &amp; E-Commerce
@@ -284,13 +284,13 @@
   </header>
 
   <!-- Mobile Navigation Drawer -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
     <a class="mobile-nav-link" href="../">Home</a>
-    <button class="mobile-nav-link mobile-services-toggle" type="button">
+    <button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Capabilities
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </button>
-    <div class="mobile-services-list">
+    <div class="mobile-services-list" id="mobileServicesList">
       <a href="../web-design/">Website Design</a>
       <a href="../mobile-apps/">Mobile Apps</a>
       <a href="../seo-marketing/">SEO &amp; Google Ads</a>
@@ -327,7 +327,7 @@
             <a class="btn btn-accent btn-lg" href="../contact/">Get Free Consultation &rarr;</a>
             <a class="btn btn-whatsapp btn-lg" href="https://wa.me/27696219479?text=Hi%20Toran%20Digital%2C%20I%20am%20looking%20for%20DSTV%20%26%20CCTV%20Installations%20services%20in%20Illovo.%20Please%20provide%20a%20quote." rel="noopener" target="_blank">Instant WhatsApp Quote</a>
           </div>
-          
+
           <!-- Key Stats Grid -->
           <div class="reveal reveal-delay-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--dark-800);">
             <div class="card-tactile" style="background: var(--dark-900); border: 1px solid var(--dark-700); padding: 1.25rem;">
@@ -389,7 +389,7 @@
           <!-- Feature Cards Column -->
           <div class="reveal-right">
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-              
+
                 <div class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.75rem; box-shadow: var(--shadow-brutal-sm);">
                   <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
                     <div style="width: 36px; height: 36px; background: var(--dark-950); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 0.9rem;">
@@ -403,7 +403,7 @@
                     Precision satellite alignment using calibrated spectrum analyzers to achieve maximum 100% signal strength and signal quality.
                   </p>
                 </div>
-              
+
                 <div class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.75rem; box-shadow: var(--shadow-brutal-sm);">
                   <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
                     <div style="width: 36px; height: 36px; background: var(--dark-950); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 0.9rem;">
@@ -417,7 +417,7 @@
                     High-definition 4K CCTV surveillance systems with night vision, AI human detection, and secure remote mobile monitoring.
                   </p>
                 </div>
-              
+
                 <div class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.75rem; box-shadow: var(--shadow-brutal-sm);">
                   <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
                     <div style="width: 36px; height: 36px; background: var(--dark-950); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 0.9rem;">
@@ -431,7 +431,7 @@
                     Heavy-duty steel brackets with concealed trunking and clean wiring management for boardrooms and luxury residences.
                   </p>
                 </div>
-              
+
             </div>
           </div>
         </div>
@@ -452,9 +452,9 @@
         </div>
 
         <div class="pricing-grid">
-          
+
             <div class="pricing-card  reveal reveal-delay-1" style="background: var(--dark-900); border: 2px solid var(--dark-700); color: var(--dark-200); padding: 2.25rem;">
-              
+
               <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--accent-red); font-weight: 700; margin-bottom: 0.25rem;">Tier 01</div>
               <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin: 0 0 0.5rem; font-weight: 800;">Standard Satellite Setup</h3>
               <p style="font-size: 0.85rem; color: var(--dark-400); margin-bottom: 1.25rem; min-height: 40px;">Single decoder satellite installation or dish realignment with precision signal calibration.</p>
@@ -468,7 +468,7 @@
                 Select Standard Satellite Setup &rarr;
               </a>
             </div>
-          
+
             <div class="pricing-card popular reveal reveal-delay-2" style="background: var(--dark-900); border: 2px solid var(--accent-red); color: var(--dark-200); padding: 2.25rem;">
               <div class="popular-badge">Most Popular in Illovo</div>
               <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--accent-red); font-weight: 700; margin-bottom: 0.25rem;">Tier 02</div>
@@ -484,9 +484,9 @@
                 Select Explora & Extra View &rarr;
               </a>
             </div>
-          
+
             <div class="pricing-card  reveal reveal-delay-3" style="background: var(--dark-900); border: 2px solid var(--dark-700); color: var(--dark-200); padding: 2.25rem;">
-              
+
               <div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--accent-red); font-weight: 700; margin-bottom: 0.25rem;">Tier 03</div>
               <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin: 0 0 0.5rem; font-weight: 800;">Commercial CCTV & AV</h3>
               <p style="font-size: 0.85rem; color: var(--dark-400); margin-bottom: 1.25rem; min-height: 40px;">Complete commercial 4K IP security camera system with concealed cabling and mobile view.</p>
@@ -500,7 +500,7 @@
                 Select Commercial CCTV & AV &rarr;
               </a>
             </div>
-          
+
         </div>
       </div>
     </section>
@@ -514,7 +514,7 @@
             Related Solutions &amp; Technical Proof
           </h3>
         </div>
-        
+
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
         <a href="../dstv-installations/" class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.5rem; text-decoration: none; display: block; box-shadow: var(--shadow-brutal-sm);">
           <div style="color: var(--accent-red); font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.25rem;">Technical Field Hub</div>
@@ -532,7 +532,7 @@
           <span style="color: var(--accent-blue); font-size: 0.85rem; font-weight: 700;">View AV Proof &rarr;</span>
         </a>
       </div>
-    
+
       </div>
     </section>
 
@@ -547,7 +547,7 @@
         </div>
 
         <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem;">
-          
+
             <div class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.5rem 1.75rem; box-shadow: var(--shadow-brutal-sm);">
               <h4 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--dark-950); margin: 0 0 0.5rem; font-weight: 800;">
                 How quickly can a technician be dispatched to Illovo?
@@ -556,7 +556,7 @@
                 We offer same-day mobile dispatch across Illovo and surrounding suburbs with fully equipped technical field vans.
               </p>
             </div>
-          
+
             <div class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.5rem 1.75rem; box-shadow: var(--shadow-brutal-sm);">
               <h4 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--dark-950); margin: 0 0 0.5rem; font-weight: 800;">
                 Can you fix E48-32 'No Signal' errors on DSTV Explora?
@@ -565,7 +565,7 @@
                 Yes. Our certified technicians trace faulty LNBs, misaligned satellite dishes, and damaged coaxial cables to restore clear signal in minutes.
               </p>
             </div>
-          
+
             <div class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.5rem 1.75rem; box-shadow: var(--shadow-brutal-sm);">
               <h4 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--dark-950); margin: 0 0 0.5rem; font-weight: 800;">
                 Do your CCTV systems include remote viewing on smartphones?
@@ -574,7 +574,7 @@
                 Yes. Every CCTV system is configured with a secure iOS and Android mobile app allowing live streaming, playback, and motion alerts.
               </p>
             </div>
-          
+
         </div>
       </div>
     </section>

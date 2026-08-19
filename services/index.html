@@ -59,19 +59,19 @@
       background: var(--gradient-hero);
       border-bottom: 1px solid var(--border-light);
     }
-    
+
     .services-intro {
       max-width: 700px;
       margin: 0 auto;
     }
-    
+
     .services-list-grid {
       display: flex;
       flex-direction: column;
       gap: 4rem;
       padding: var(--space-4xl) 0;
     }
-    
+
     .service-row {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -80,24 +80,24 @@
       padding-bottom: 4rem;
       border-bottom: 1px solid var(--border-light);
     }
-    
+
     .service-row:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
-    
+
     .service-row.reverse {
       grid-template-columns: 1.2fr 1fr;
     }
-    
+
     .service-row.reverse .service-row-info {
       order: 2;
     }
-    
+
     .service-row.reverse .service-row-cards {
       order: 1;
     }
-    
+
     .service-row-info h2 {
       font-family: var(--font-display);
       font-size: var(--text-3xl);
@@ -106,20 +106,20 @@
       margin-bottom: var(--space-md);
       line-height: 1.2;
     }
-    
+
     .service-row-info p {
       color: var(--text-body);
       font-size: var(--text-base);
       margin-bottom: var(--space-lg);
       line-height: 1.7;
     }
-    
+
     .service-row-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: var(--space-lg);
     }
-    
+
     .sub-service-card {
       background: var(--white);
       border: 1px solid var(--border-light);
@@ -128,13 +128,13 @@
       box-shadow: var(--shadow-sm);
       transition: all var(--transition);
     }
-    
+
     .sub-service-card:hover {
       transform: translateY(-5px);
       border-color: var(--teal-500);
       box-shadow: var(--shadow-md);
     }
-    
+
     .sub-service-card h4 {
       font-family: var(--font-display);
       font-size: var(--text-base);
@@ -142,14 +142,14 @@
       color: var(--navy-800);
       margin-bottom: 0.5rem;
     }
-    
+
     .sub-service-card p {
       font-size: var(--text-sm);
       color: var(--text-muted);
       margin-bottom: 0;
       line-height: 1.5;
     }
-    
+
     @media (max-width: 992px) {
       .service-row, .service-row.reverse {
         grid-template-columns: 1fr;
@@ -306,11 +306,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item active" data-target="mega-web" href="../web-design/">
                   Website Design
@@ -399,13 +399,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle open">
+<button class="mobile-nav-link mobile-services-toggle open" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list open">
+<div class="mobile-services-list open" id="mobileServicesList">
 <a href="../web-design/">Website Design</a>
 <a href="../mobile-apps/">Mobile Apps</a>
 <a href="../seo-marketing/">SEO &amp; Google Ads</a>
@@ -460,15 +460,15 @@
 </div>
 <div class="hero-showcase">
 <div class="showcase-card showcase-main">
-<picture><source srcset="../assets/showcase_web.webp" type="image/webp"/><img alt="Web Design Services Showcase" fetchpriority="high" src="../assets/showcase_web.jpg"/ decoding="async"></picture>
+<picture><source srcset="../assets/showcase_web.webp" type="image/webp"/><img alt="Web Design Services Showcase" fetchpriority="high" src="../assets/showcase_web.jpg"/ decoding="async" width="1024" height="1024"></picture>
 <span class="showcase-label">Web &amp; Mobile Apps</span>
 </div>
 <div class="showcase-card">
-<picture><source srcset="../assets/showcase_vehicle.webp" type="image/webp"/><img alt="Vehicle Branding Showcase" loading="lazy" src="../assets/showcase_vehicle.jpg"/ decoding="async"></picture>
+<picture><source srcset="../assets/showcase_vehicle.webp" type="image/webp"/><img alt="Vehicle Branding Showcase" loading="lazy" src="../assets/showcase_vehicle.jpg"/ decoding="async" width="1024" height="1024"></picture>
 <span class="showcase-label">Fleet Signage</span>
 </div>
 <div class="showcase-card">
-<picture><source srcset="../assets/showcase_dstv.webp" type="image/webp"/><img alt="DSTV Installations Showcase" loading="lazy" src="../assets/showcase_dstv.jpg"/ decoding="async"></picture>
+<picture><source srcset="../assets/showcase_dstv.webp" type="image/webp"/><img alt="DSTV Installations Showcase" loading="lazy" src="../assets/showcase_dstv.jpg"/ decoding="async" width="1024" height="1024"></picture>
 <span class="showcase-label">Installations</span>
 </div>
 </div>
@@ -525,7 +525,7 @@
 </div>
 </div>
 <div class="service-image-col">
-<img alt="Web Design Agency Johannesburg" loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async">
+<img alt="Web Design Agency Johannesburg" loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async" width="800" height="533">
 </div>
 </div>
 <!-- 2. Mobile App Development -->
@@ -560,7 +560,7 @@
 </div>
 </div>
 <div class="service-image-col">
-<img alt="Mobile App Development South Africa" loading="lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async">
+<img alt="Mobile App Development South Africa" loading="lazy" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async" width="800" height="533">
 </div>
 </div>
 <!-- Mid-Page CTA -->
@@ -602,7 +602,7 @@
 </div>
 </div>
 <div class="service-image-col">
-<img alt="SEO Services Johannesburg" loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async">
+<img alt="SEO Services Johannesburg" loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async" width="800" height="570">
 </div>
 </div>
 <!-- 4. Vehicle Branding -->
@@ -637,7 +637,7 @@
 </div>
 </div>
 <div class="service-image-col">
-<img alt="Vehicle Wrapping Johannesburg" loading="lazy" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async">
+<img alt="Vehicle Wrapping Johannesburg" loading="lazy" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async" width="800" height="533">
 </div>
 </div>
 <!-- 5. DSTV & Installations -->
@@ -672,7 +672,7 @@
 </div>
 </div>
 <div class="service-image-col">
-<img alt="DSTV Installers Gauteng" loading="lazy" src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async">
+<img alt="DSTV Installers Gauteng" loading="lazy" src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async" width="800" height="533">
 </div>
 </div>
 <!-- 6. Graphic Design -->
@@ -707,7 +707,7 @@
 </div>
 </div>
 <div class="service-image-col">
-<img alt="Graphic Design Agency" loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async">
+<img alt="Graphic Design Agency" loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);"/ decoding="async" width="800" height="533">
 </div>
 </div>
 </div>

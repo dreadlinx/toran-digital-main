@@ -622,3 +622,137 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initActiveNavLinks();
 });
+
+
+// UI remediation: accessible disclosures, interactive states, keyboard slider support, and server-handled lead forms.
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdown = document.querySelector('.nav-dropdown');
+  const desktopTrigger = dropdown?.querySelector('.nav-dropdown-trigger');
+  const megaMenu = dropdown?.querySelector('.mega-dropdown');
+  if (dropdown && desktopTrigger && megaMenu) {
+    const closeDesktopMenu = () => {
+      dropdown.classList.remove('is-open');
+      desktopTrigger.setAttribute('aria-expanded', 'false');
+    };
+    desktopTrigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      const open = dropdown.classList.toggle('is-open');
+      desktopTrigger.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', (event) => {
+      if (!dropdown.contains(event.target)) closeDesktopMenu();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeDesktopMenu();
+    });
+  }
+
+  document.querySelectorAll('.mega-item').forEach((item) => {
+    item.addEventListener('focus', () => item.dispatchEvent(new Event('mouseenter')));
+  });
+
+  const mobileNav = document.getElementById('mobileNav');
+  const hamburger = document.getElementById('hamburger');
+  const mobileServiceToggle = document.getElementById('mobileServicesToggle');
+  const mobileServiceList = document.getElementById('mobileServicesList');
+  if (mobileNav && hamburger) {
+    const updateMobileNavState = () => {
+      const open = mobileNav.classList.contains('open') || mobileNav.classList.contains('active');
+      mobileNav.setAttribute('aria-hidden', String(!open));
+      if (open) {
+        const firstLink = mobileNav.querySelector('a, button');
+        if (firstLink) firstLink.focus();
+      }
+    };
+    hamburger.addEventListener('click', () => window.setTimeout(updateMobileNavState, 0));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        window.setTimeout(() => {
+          if (mobileNav.getAttribute('aria-hidden') === 'true') hamburger.focus();
+        }, 0);
+      }
+    });
+    if (!mobileNav.querySelector('.mobile-primary-cta')) {
+      const action = document.createElement('a');
+      action.className = 'mobile-primary-cta';
+      action.href = '/contact/';
+      action.textContent = 'Get a fast proposal';
+      mobileNav.prepend(action);
+    }
+  }
+  if (mobileServiceToggle && mobileServiceList) {
+    mobileServiceToggle.addEventListener('click', () => {
+      window.setTimeout(() => {
+        mobileServiceToggle.setAttribute('aria-expanded', String(mobileServiceList.classList.contains('open')));
+      }, 0);
+    });
+  }
+
+  document.querySelectorAll('.chip-choice, .filter-btn').forEach((button) => {
+    const active = button.classList.contains('active');
+    button.setAttribute('aria-pressed', String(active));
+    button.addEventListener('click', () => {
+      const group = button.classList.contains('filter-btn')
+        ? document.querySelectorAll('.filter-btn')
+        : button.parentElement?.querySelectorAll('.chip-choice') || [];
+      group.forEach((option) => option.setAttribute('aria-pressed', String(option === button)));
+    });
+  });
+
+  const stage = document.getElementById('baStage');
+  const handle = document.getElementById('baHandle');
+  const afterLayer = document.getElementById('baAfterLayer');
+  if (stage && handle && afterLayer) {
+    let current = 50;
+    const setComparison = (percentage) => {
+      current = Math.min(100, Math.max(0, percentage));
+      afterLayer.style.width = `${current}%`;
+      handle.style.left = `${current}%`;
+      handle.setAttribute('aria-valuenow', String(Math.round(current)));
+    };
+    handle.setAttribute('tabindex', '0');
+    handle.setAttribute('role', 'slider');
+    handle.setAttribute('aria-label', 'Before and after comparison position');
+    handle.setAttribute('aria-valuemin', '0');
+    handle.setAttribute('aria-valuemax', '100');
+    handle.setAttribute('aria-valuenow', String(current));
+    handle.addEventListener('keydown', (event) => {
+      const increment = event.shiftKey ? 10 : 5;
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') { event.preventDefault(); setComparison(current - increment); }
+      if (event.key === 'ArrowRight' || event.key === 'ArrowUp') { event.preventDefault(); setComparison(current + increment); }
+      if (event.key === 'Home') { event.preventDefault(); setComparison(0); }
+      if (event.key === 'End') { event.preventDefault(); setComparison(100); }
+    });
+  }
+
+  document.querySelectorAll('.faq-question').forEach((button, index) => {
+    const item = button.closest('.faq-item');
+    const answer = item?.querySelector('.faq-answer');
+    if (answer && !answer.id) answer.id = `faq-answer-${index + 1}`;
+    if (answer) button.setAttribute('aria-controls', answer.id);
+  });
+
+  document.querySelectorAll('form[data-lead-form]').forEach((form) => {
+    const status = form.querySelector('[data-form-status]');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const submit = form.querySelector('[type="submit"]');
+      const data = new FormData(form);
+      data.set('source_url', window.location.href);
+      if (submit) submit.disabled = true;
+      if (status) { status.className = 'form-status'; status.textContent = 'Sending your request…'; }
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        const result = await response.json();
+        if (!response.ok || !result.ok) throw new Error(result.message || 'We could not send your request.');
+        form.reset();
+        if (status) { status.className = 'form-status is-success'; status.textContent = result.message; }
+      } catch (error) {
+        if (status) { status.className = 'form-status is-error'; status.textContent = error.message || 'We could not send your request. Please use WhatsApp or call us.'; }
+      } finally {
+        if (submit) submit.disabled = false;
+      }
+    });
+  });
+});

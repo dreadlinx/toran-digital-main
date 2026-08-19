@@ -3483,3 +3483,59 @@ button {
   }
 }
 
+
+
+/* UI remediation: shared keyboard focus, disclosure state, lead feedback, and responsive header safeguards. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--accent-blue) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(0, 102, 204, 0.2) !important;
+}
+
+.nav-dropdown.is-open .mega-dropdown,
+.nav-dropdown:focus-within .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown.is-open .nav-dropdown-trigger svg,
+.nav-dropdown:focus-within .nav-dropdown-trigger svg {
+  transform: rotate(180deg);
+}
+
+.mobile-primary-cta {
+  display: block;
+  margin: 1rem 0 0;
+  padding: 0.95rem 1rem;
+  background: var(--accent-red);
+  color: var(--white) !important;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-status {
+  min-height: 1.2rem;
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-status.is-success { color: #116b4a; }
+.form-status.is-error { color: #b42318; }
+
+@media (max-width: 1320px) and (min-width: 1025px) {
+  .nav-menu { display: none !important; }
+  .hamburger { display: flex !important; }
+  .header-cta .btn-whatsapp { display: none !important; }
+  .header-cta .btn { padding: 8px 11px; font-size: 0.68rem; }
+}
+
+@media (max-width: 768px) {
+  .tactical-hud { display: none !important; }
+}

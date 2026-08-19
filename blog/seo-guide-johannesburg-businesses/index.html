@@ -158,11 +158,11 @@
 <a href="../../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item active" data-target="mega-web" href="../../web-design/">
                   Website Design
@@ -258,13 +258,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle">
+<button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list">
+<div class="mobile-services-list" id="mobileServicesList">
 <a href="../../web-design/">Website Design</a>
 <a href="../../mobile-apps/">Mobile Apps</a>
 <a href="../../seo-marketing/">SEO &amp; Google Ads</a>
@@ -287,7 +287,7 @@
 <section class="article-hero"><div class="container article-wrap"><p class="article-kicker">SEO & Marketing</p><h1>Local SEO Guide for Johannesburg Businesses</h1><p class="hero-description" style="margin-top:1rem;">A beginner-friendly guide to showing up when nearby customers search for what you do.</p><p class="article-meta">7 min read · Updated August 2026</p></div></section>
 <article class="article-content">
 <div class="post-hero-image" style="margin: 2rem 0 3rem; border: 3px solid var(--dark-900); box-shadow: 8px 8px 0px var(--dark-900); overflow: hidden; border-radius: 0;">
-  <img alt="Local SEO Strategy and Analytics for Gauteng" src="../../assets/on page seo/seo_analytics.webp" style="width: 100%; max-height: 440px; object-fit: cover; display: block;" loading="lazy" decoding="async">
+  <img alt="Local SEO Strategy and Analytics for Gauteng" src="../../assets/on page seo/seo_analytics.webp" style="width: 100%; max-height: 440px; object-fit: cover; display: block;" loading="lazy" decoding="async" width="604" height="350">
 </div><div class="container article-wrap">
 <p>Local SEO is how your business shows up when someone nearby searches for "plumber near me" or "web design Johannesburg" - both in regular Google search results and in the map pack that appears above them. For a business that depends on local customers, it's usually the highest-return marketing you can do, and most of it doesn't cost anything but time.</p>
 <h2>Start with your Google Business Profile</h2>

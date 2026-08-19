@@ -279,11 +279,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item active" data-target="mega-web" href="../web-design/">
                   Website Design
@@ -372,13 +372,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle">
+<button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list">
+<div class="mobile-services-list" id="mobileServicesList">
 <a href="../web-design/" style="color: var(--teal-600);">Website Design</a>
 <a href="../mobile-apps/" style="">Mobile Apps</a>
 <a href="../seo-marketing/" style="">SEO &amp; Google Ads</a>
@@ -640,23 +640,23 @@
 </div>
 <div style="display:flex; flex-direction:column; gap: 0.75rem; margin-top: 2.5rem; max-width: 800px;">
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Do you do in-person meetings in Pretoria?</button>
+<button aria-expanded="false" class="faq-question" type="button">Do you do in-person meetings in Pretoria?</button>
 <div class="faq-answer"><p>Yes — for larger projects we're happy to meet at your offices in Pretoria or Centurion. For smaller packages, most of the process happens efficiently via WhatsApp, email, and video call, which saves everyone time.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">How long does a website take to build?</button>
+<button aria-expanded="false" class="faq-question" type="button">How long does a website take to build?</button>
 <div class="faq-answer"><p>Starter websites: 5–7 business days. Corporate sites: 2–3 weeks. E-commerce stores: 3–4 weeks depending on product catalogue size. We'll give you a firm timeline when we quote.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Will my website rank on Google for Pretoria searches?</button>
+<button aria-expanded="false" class="faq-question" type="button">Will my website rank on Google for Pretoria searches?</button>
 <div class="faq-answer"><p>Every website we build includes solid on-page SEO foundations — proper heading structure, metadata, local keyword optimization, Google Business Profile setup, and fast loading. Most clients start seeing local ranking improvements within 4–8 weeks. Our SEO &amp; Google Ads package accelerates this significantly.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Do I own the website once it's complete?</button>
+<button aria-expanded="false" class="faq-question" type="button">Do I own the website once it's complete?</button>
 <div class="faq-answer"><p>Completely. Once you've paid, the website, all code, content, and files are yours. We don't hold anything hostage or lock you into ongoing fees unless you choose a maintenance or hosting package.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Can I update the website myself after it's built?</button>
+<button aria-expanded="false" class="faq-question" type="button">Can I update the website myself after it's built?</button>
 <div class="faq-answer"><p>Yes — WordPress sites are built with easy-edit interfaces. We give you a brief walkthrough on how to update content, add images, and publish blog posts. If you'd prefer we handle updates, our monthly maintenance packages cover that too.</p></div>
 </div>
 </div>

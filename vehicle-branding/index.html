@@ -343,11 +343,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item" data-target="mega-web" href="../web-design/">
                   Website Design
@@ -443,13 +443,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle">
+<button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list">
+<div class="mobile-services-list" id="mobileServicesList">
 <a href="../web-design/" style="">Website Design</a>
 <a href="../mobile-apps/" style="">Mobile Apps</a>
 <a href="../seo-marketing/" style="">SEO &amp; Google Ads</a>
@@ -493,7 +493,7 @@
 </div>
 <div class="hero-showcase">
 <div class="showcase-card showcase-main">
-<img alt="Vehicle Wrapping Showcase" fetchpriority="high" src="../assets/vehicle branding/IMG-20250114-WA0196.webp"/ decoding="async">
+<img alt="Vehicle Wrapping Showcase" fetchpriority="high" src="../assets/vehicle branding/IMG-20250114-WA0196.webp"/ decoding="async" width="1280" height="960">
 <span class="showcase-label">Commercial Fleet Vinyl Wrap</span>
 </div>
 </div>
@@ -671,27 +671,27 @@
 </div>
 <div style="display:flex; flex-direction:column; gap: 0.75rem; margin-top: 2.5rem; max-width: 800px;">
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">How long does a vehicle wrap last?</button>
+<button aria-expanded="false" class="faq-question" type="button">How long does a vehicle wrap last?</button>
 <div class="faq-answer"><p>A quality cast vinyl wrap lasts 5–7 years under normal South African conditions. Cheaper calendered films might last 2–3 years before shrinking and lifting. We only use cast vinyl for all our wraps.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Will a wrap damage my car's paint?</button>
+<button aria-expanded="false" class="faq-question" type="button">Will a wrap damage my car's paint?</button>
 <div class="faq-answer"><p>No — in fact, it protects it. The vinyl acts as a shield against UV rays, stone chips, and light scratches. When removed correctly by a professional, the original paint is perfectly preserved underneath.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Do you design the artwork or do I need to supply it?</button>
+<button aria-expanded="false" class="faq-question" type="button">Do you design the artwork or do I need to supply it?</button>
 <div class="faq-answer"><p>We handle everything — brief, design, print, and install. If you already have artwork or a brand guide, we work with it. If you're starting from scratch, our graphic team will develop the full wrap design as part of the package.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">How long does the installation take?</button>
+<button aria-expanded="false" class="faq-question" type="button">How long does the installation take?</button>
 <div class="faq-answer"><p>Decals and lettering: same day. Partial wraps: 1–2 days. Full wraps: 2–3 days depending on the vehicle size. We'll give you an accurate timeline when we quote.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">Can you brand a fleet of vehicles consistently?</button>
+<button aria-expanded="false" class="faq-question" type="button">Can you brand a fleet of vehicles consistently?</button>
 <div class="faq-answer"><p>Yes — fleet consistency is one of our specialties. We maintain identical colour profiles, design files, and application standards across every vehicle, whether it's 3 bakkies or 30 delivery vans.</p></div>
 </div>
 <div class="faq-item">
-<button aria-expanded="false" class="faq-question">What areas do you cover?</button>
+<button aria-expanded="false" class="faq-question" type="button">What areas do you cover?</button>
 <div class="faq-answer"><p>We primarily serve Johannesburg, Germiston, the East Rand (Benoni, Boksburg, Brakpan), and Sandton. We also service Pretoria and other Gauteng areas — just WhatsApp us your location and we'll confirm availability.</p></div>
 </div>
 </div>

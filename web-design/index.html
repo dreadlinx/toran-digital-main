@@ -309,11 +309,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item active" data-target="mega-web" href="./">
                   Website Design
@@ -409,13 +409,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle open">
+<button class="mobile-nav-link mobile-services-toggle open" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list open">
+<div class="mobile-services-list open" id="mobileServicesList">
 <a href="./" style="color: var(--teal-600);">Website Design</a>
 <a href="../mobile-apps/" style="">Mobile Apps</a>
 <a href="../seo-marketing/" style="">SEO &amp; Google Ads</a>
@@ -460,7 +460,7 @@
 </div>
 <div class="hero-showcase">
 <div class="showcase-card showcase-main">
-<picture><source srcset="../assets/showcase_web.webp" type="image/webp"/><img alt="Web Design Showcase" fetchpriority="high" src="../assets/showcase_web.jpg"/ decoding="async"></picture>
+<picture><source srcset="../assets/showcase_web.webp" type="image/webp"/><img alt="Web Design Showcase" fetchpriority="high" src="../assets/showcase_web.jpg"/ decoding="async" width="1024" height="1024"></picture>
 <span class="showcase-label">Custom E-Commerce Platform</span>
 </div>
 </div>
@@ -639,7 +639,7 @@
 <h2 class="section-title">Frequently Asked Questions About Web Design in Johannesburg</h2>
 <div class="faq-list">
 <div class="faq-item active">
-<button class="faq-question">How long does it take to build a website?
+<button class="faq-question" type="button">How long does it take to build a website?
             <svg class="faq-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
 </button>
 <div class="faq-answer">
@@ -647,7 +647,7 @@
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-question">Do you build websites on WordPress?
+<button class="faq-question" type="button">Do you build websites on WordPress?
             <svg class="faq-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
 </button>
 <div class="faq-answer">
@@ -655,7 +655,7 @@
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-question">Will my website rank on Google?
+<button class="faq-question" type="button">Will my website rank on Google?
             <svg class="faq-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
 </button>
 <div class="faq-answer">
@@ -663,7 +663,7 @@
 </div>
 </div>
 <div class="faq-item">
-<button class="faq-question">Do you offer website hosting and maintenance?
+<button class="faq-question" type="button">Do you offer website hosting and maintenance?
             <svg class="faq-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
 </button>
 <div class="faq-answer">

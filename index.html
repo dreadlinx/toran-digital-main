@@ -157,6 +157,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <!-- Background Noise Grain Overlay -->
   <div class="bg-noise-overlay" aria-hidden="true"></div>
 
@@ -195,11 +196,11 @@
 
           <!-- Services Mega Dropdown -->
           <div class="nav-dropdown">
-            <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+            <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Capabilities
               <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="mega-dropdown">
+            <div class="mega-dropdown" id="capabilities-menu">
               <div class="mega-dropdown-left">
                 <a class="mega-item active" data-target="mega-web" href="web-design/">
                   Web &amp; E-Commerce
@@ -288,13 +289,13 @@
   </header>
 
   <!-- Mobile Navigation Overlay -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
     <a class="mobile-nav-link active" href="./">Home</a>
-    <button class="mobile-nav-link mobile-services-toggle" type="button">
+    <button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </button>
-    <div class="mobile-services-list">
+    <div class="mobile-services-list" id="mobileServicesList">
       <a href="web-design/">Website Design</a>
       <a href="mobile-apps/">Mobile Apps</a>
       <a href="seo-marketing/">SEO &amp; Google Ads</a>
@@ -713,25 +714,25 @@
               <!-- Service Vertical Choice -->
               <div class="estimator-group-title">1. Select Primary Vertical</div>
               <div class="chip-options-row" id="verticalChoices">
-                <button class="chip-choice active" data-cost="4500" data-days="5" data-val="Web Platform / E-Commerce">Web &amp; E-Commerce</button>
-                <button class="chip-choice" data-cost="18000" data-days="14" data-val="Mobile Application (iOS/Android)">Mobile App (iOS/Android)</button>
-                <button class="chip-choice" data-cost="8500" data-days="4" data-val="Commercial Vehicle Wrap">Vehicle Fleet Wrap</button>
-                <button class="chip-choice" data-cost="3200" data-days="1" data-val="DSTV &amp; CCTV Installation">DSTV / CCTV Security</button>
+                <button class="chip-choice active" data-cost="4500" data-days="5" data-val="Web Platform / E-Commerce" type="button">Web &amp; E-Commerce</button>
+                <button class="chip-choice" data-cost="18000" data-days="14" data-val="Mobile Application (iOS/Android)" type="button">Mobile App (iOS/Android)</button>
+                <button class="chip-choice" data-cost="8500" data-days="4" data-val="Commercial Vehicle Wrap" type="button">Vehicle Fleet Wrap</button>
+                <button class="chip-choice" data-cost="3200" data-days="1" data-val="DSTV &amp; CCTV Installation" type="button">DSTV / CCTV Security</button>
               </div>
 
               <!-- Scope Complexity Choice -->
               <div class="estimator-group-title">2. Project Complexity &amp; Scale</div>
               <div class="chip-options-row" id="scaleChoices">
-                <button class="chip-choice active" data-mult="1.0" data-label="Standard Scale">Starter / Single Unit</button>
-                <button class="chip-choice" data-mult="1.8" data-label="Growth Business">Growth SME (Multi-Page / Fleet)</button>
-                <button class="chip-choice" data-mult="3.2" data-label="Enterprise Platform">Enterprise Scale / Custom System</button>
+                <button class="chip-choice active" data-mult="1.0" data-label="Standard Scale" type="button">Starter / Single Unit</button>
+                <button class="chip-choice" data-mult="1.8" data-label="Growth Business" type="button">Growth SME (Multi-Page / Fleet)</button>
+                <button class="chip-choice" data-mult="3.2" data-label="Enterprise Platform" type="button">Enterprise Scale / Custom System</button>
               </div>
 
               <!-- Dispatch Urgency -->
               <div class="estimator-group-title">3. Turnaround &amp; Dispatch</div>
               <div class="chip-options-row" id="urgencyChoices">
-                <button class="chip-choice active" data-extra="0" data-urgency="Standard Delivery">Standard Schedule</button>
-                <button class="chip-choice" data-extra="1500" data-urgency="Priority Fast-Track">Priority Dispatch (Same-Day / Rush)</button>
+                <button class="chip-choice active" data-extra="0" data-urgency="Standard Delivery" type="button">Standard Schedule</button>
+                <button class="chip-choice" data-extra="1500" data-urgency="Priority Fast-Track" type="button">Priority Dispatch (Same-Day / Rush)</button>
               </div>
             </div>
 
@@ -775,12 +776,12 @@
         </div>
 
         <div class="portfolio-filter-bar">
-          <button class="filter-btn active" data-filter="all">All Work</button>
-          <button class="filter-btn" data-filter="web">Web &amp; E-Commerce</button>
-          <button class="filter-btn" data-filter="vehicle">Vehicle Wraps</button>
-          <button class="filter-btn" data-filter="apps">Mobile Apps</button>
-          <button class="filter-btn" data-filter="dstv">DSTV &amp; CCTV</button>
-          <button class="filter-btn" data-filter="branding">Branding &amp; Signs</button>
+          <button class="filter-btn active" data-filter="all" type="button">All Work</button>
+          <button class="filter-btn" data-filter="web" type="button">Web &amp; E-Commerce</button>
+          <button class="filter-btn" data-filter="vehicle" type="button">Vehicle Wraps</button>
+          <button class="filter-btn" data-filter="apps" type="button">Mobile Apps</button>
+          <button class="filter-btn" data-filter="dstv" type="button">DSTV &amp; CCTV</button>
+          <button class="filter-btn" data-filter="branding" type="button">Branding &amp; Signs</button>
         </div>
 
         <div class="portfolio-gallery-grid">
@@ -931,7 +932,7 @@
 
         <div class="faq-accordion-list">
           <div class="faq-item">
-            <button aria-expanded="false" class="faq-question">
+            <button aria-expanded="false" class="faq-question" type="button">
               <span>What does a professional website or e-commerce platform cost?</span>
               <span class="faq-icon-cross">+</span>
             </button>
@@ -941,7 +942,7 @@
           </div>
 
           <div class="faq-item">
-            <button aria-expanded="false" class="faq-question">
+            <button aria-expanded="false" class="faq-question" type="button">
               <span>Do you handle mobile app store deployment and licensing?</span>
               <span class="faq-icon-cross">+</span>
             </button>
@@ -951,7 +952,7 @@
           </div>
 
           <div class="faq-item">
-            <button aria-expanded="false" class="faq-question">
+            <button aria-expanded="false" class="faq-question" type="button">
               <span>How long does commercial vehicle wrapping take?</span>
               <span class="faq-icon-cross">+</span>
             </button>
@@ -961,7 +962,7 @@
           </div>
 
           <div class="faq-item">
-            <button aria-expanded="false" class="faq-question">
+            <button aria-expanded="false" class="faq-question" type="button">
               <span>Are your DSTV and CCTV technicians accredited?</span>
               <span class="faq-icon-cross">+</span>
             </button>

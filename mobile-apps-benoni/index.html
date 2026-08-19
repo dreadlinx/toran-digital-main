@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  
+
   <!-- Primary SEO Meta Tags -->
   <title>Mobile App Development Benoni | Toran Digital</title>
   <meta name="description" content="Custom iOS & Android mobile app development in Benoni. Flutter, React Native, and native mobile apps engineered for speed, security, and scale."/>
@@ -210,11 +210,11 @@
 
           <!-- Services Mega Dropdown -->
           <div class="nav-dropdown">
-            <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+            <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Capabilities
               <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
-            <div class="mega-dropdown">
+            <div class="mega-dropdown" id="capabilities-menu">
               <div class="mega-dropdown-left">
                 <a class="mega-item active" data-target="mega-web" href="../web-design/">
                   Web &amp; E-Commerce
@@ -304,13 +304,13 @@
   </header>
 
   <!-- Mobile Navigation Drawer -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
     <a class="mobile-nav-link" href="../">Home</a>
-    <button class="mobile-nav-link mobile-services-toggle" type="button">
+    <button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Capabilities
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </button>
-    <div class="mobile-services-list">
+    <div class="mobile-services-list" id="mobileServicesList">
       <a href="../web-design/">Website Design</a>
       <a href="../mobile-apps/">Mobile Apps</a>
       <a href="../seo-marketing/">SEO &amp; Google Ads</a>
@@ -347,7 +347,7 @@
             <a class="btn btn-accent btn-lg" href="../contact/">Get Free Consultation &rarr;</a>
             <a class="btn btn-whatsapp btn-lg" href="https://wa.me/27696219479?text=Hi%20Toran%20Digital%2C%20I%2527d%20like%20a%20quote%20for%20Mobile%20App%20Development%20in%20Benoni" rel="noopener" target="_blank">Instant WhatsApp Quote</a>
           </div>
-          
+
           <!-- Key Stats Grid -->
           <div class="reveal reveal-delay-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--dark-800);">
             <div class="card-tactile" style="background: var(--dark-900); border: 1px solid var(--dark-700); padding: 1.25rem;">
@@ -393,7 +393,7 @@
             </div>
           </div>
           <div class="reveal reveal-delay-1" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
-            
+
     <div class="card-tactile" style="background: var(--dark-900); border: 2px solid var(--dark-700); border-radius: 0px; padding: 2rem; box-shadow: 4px 4px 0px var(--dark-950);">
       <div style="width: 48px; height: 48px; background: rgba(255, 51, 0, 0.1); border: 1px solid var(--accent-red); display: flex; align-items: center; justify-content: center; color: var(--accent-red); margin-bottom: 1.25rem;">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
@@ -401,7 +401,7 @@
       <h3 style="font-size: 1.25rem; font-family: var(--font-display); color: #fff; margin-bottom: 0.75rem;">Cross-Platform Native Apps</h3>
       <p style="color: var(--dark-400); font-size: 0.95rem; line-height: 1.6; margin: 0;">Single codebase targeting iOS & Android simultaneously, cutting development cost and time-to-market in half.</p>
     </div>
-  
+
     <div class="card-tactile" style="background: var(--dark-900); border: 2px solid var(--dark-700); border-radius: 0px; padding: 2rem; box-shadow: 4px 4px 0px var(--dark-950);">
       <div style="width: 48px; height: 48px; background: rgba(255, 51, 0, 0.1); border: 1px solid var(--accent-red); display: flex; align-items: center; justify-content: center; color: var(--accent-red); margin-bottom: 1.25rem;">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
@@ -409,7 +409,7 @@
       <h3 style="font-size: 1.25rem; font-family: var(--font-display); color: #fff; margin-bottom: 0.75rem;">Robust Cloud & API Backends</h3>
       <p style="color: var(--dark-400); font-size: 0.95rem; line-height: 1.6; margin: 0;">Secure Node.js/Python server architectures, AWS/Firebase cloud hosting, and real-time database sync.</p>
     </div>
-  
+
     <div class="card-tactile" style="background: var(--dark-900); border: 2px solid var(--dark-700); border-radius: 0px; padding: 2rem; box-shadow: 4px 4px 0px var(--dark-950);">
       <div style="width: 48px; height: 48px; background: rgba(255, 51, 0, 0.1); border: 1px solid var(--accent-red); display: flex; align-items: center; justify-content: center; color: var(--accent-red); margin-bottom: 1.25rem;">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -417,7 +417,7 @@
       <h3 style="font-size: 1.25rem; font-family: var(--font-display); color: #fff; margin-bottom: 0.75rem;">POPIA & Payment Integration</h3>
       <p style="color: var(--dark-400); font-size: 0.95rem; line-height: 1.6; margin: 0;">End-to-end data encryption, biometrics (FaceID/Fingerprint), and South African payment gateways (PayFast, Ozow, Peach Payments).</p>
     </div>
-  
+
           </div>
         </div>
       </div>
@@ -433,46 +433,46 @@
           </h2>
           <p class="section-subtitle" style="color: var(--dark-400);">Engineered to deliver high commercial return and long-term scalability.</p>
         </div>
-        
+
     <div class="pricing-grid reveal reveal-delay-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-      
+
         <div class="pricing-card card-tactile " style="background: var(--dark-900); border: 2px solid var(--dark-700); border-radius: 0px; padding: 2.5rem; text-align: center; position: relative; box-shadow: 4px 4px 0px var(--dark-950);">
-          
+
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700;">Tier 01</div>
           <h3 style="font-size: 1.5rem; font-family: var(--font-display); color: #fff; margin-bottom: 0.5rem;">MVP / Startup App</h3>
           <p style="color: var(--dark-400); font-size: 0.9rem; min-height: 48px; line-height: 1.5;">Core feature app designed for market testing and early user validation in Benoni.</p>
           <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: #fff; margin: 1.5rem 0;">R24,500 <span style="font-size: 0.9rem; color: var(--dark-400); font-weight: 400; font-family: var(--font-body);">once-off</span></div>
           <ul style="list-style: none; padding: 0; margin: 1.5rem 0; text-align: left;">
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>iOS & Android App (Flutter)</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>User Authentication & Profiles</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Core Feature Workflow</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Cloud Database & Push Alerts</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>App Store & Google Play Submission</span>
               </li>
-            
+
           </ul>
           <a href="https://wa.me/27696219479?text=Hi%20Toran%20Digital%2C%20I%2527d%20like%20a%20quote%20for%20the%20MVP%20%2F%20Startup%20App%20package%20in%20Benoni" class="btn btn-outline" style="width: 100%;" target="_blank" rel="noopener">Request Quote &rarr;</a>
         </div>
-      
+
         <div class="pricing-card card-tactile popular" style="background: var(--dark-900); border: 2px solid var(--accent-red); border-radius: 0px; padding: 2.5rem; text-align: center; position: relative; box-shadow: 8px 8px 0px var(--accent-red);">
           <div class="popular-badge" style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent-red); color: #fff; padding: 4px 16px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--dark-950);">RECOMMENDED</div>
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700;">Tier 02</div>
@@ -480,73 +480,73 @@
           <p style="color: var(--dark-400); font-size: 0.9rem; min-height: 48px; line-height: 1.5;">Full-featured commercial mobile platform with database, payment, and analytics.</p>
           <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: #fff; margin: 1.5rem 0;">R48,500 <span style="font-size: 0.9rem; color: var(--dark-400); font-weight: 400; font-family: var(--font-body);">once-off</span></div>
           <ul style="list-style: none; padding: 0; margin: 1.5rem 0; text-align: left;">
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Advanced iOS & Android Architecture</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>South African Payment Gateways</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Real-Time Geo & Push Notifications</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Custom Admin Dashboard Portal</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>POPIA Security & SLA Support</span>
               </li>
-            
+
           </ul>
           <a href="https://wa.me/27696219479?text=Hi%20Toran%20Digital%2C%20I%2527d%20like%20a%20quote%20for%20the%20Enterprise%20App%20package%20in%20Benoni" class="btn btn-accent" style="width: 100%;" target="_blank" rel="noopener">Request Quote &rarr;</a>
         </div>
-      
+
         <div class="pricing-card card-tactile " style="background: var(--dark-900); border: 2px solid var(--dark-700); border-radius: 0px; padding: 2.5rem; text-align: center; position: relative; box-shadow: 4px 4px 0px var(--dark-950);">
-          
+
           <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 700;">Tier 03</div>
           <h3 style="font-size: 1.5rem; font-family: var(--font-display); color: #fff; margin-bottom: 0.5rem;">Custom Ecosystem</h3>
           <p style="color: var(--dark-400); font-size: 0.9rem; min-height: 48px; line-height: 1.5;">Comprehensive multi-role mobile system with integrated APIs and hardware IoT.</p>
           <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: #fff; margin: 1.5rem 0;">R85,000+ <span style="font-size: 0.9rem; color: var(--dark-400); font-weight: 400; font-family: var(--font-body);">once-off</span></div>
           <ul style="list-style: none; padding: 0; margin: 1.5rem 0; text-align: left;">
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Multi-App Suite (Customer + Driver/Staff)</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Complex API & ERP System Connect</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Offline Mode with Background Sync</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Custom Biometric & Bluetooth IoT</span>
               </li>
-            
+
               <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 10px; color: var(--dark-300); font-size: 0.9rem;">
                 <svg style="width: 18px; height: 18px; color: var(--accent-red); flex-shrink: 0; margin-top: 2px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                 <span>Dedicated Software Team & Roadmap</span>
               </li>
-            
+
           </ul>
           <a href="https://wa.me/27696219479?text=Hi%20Toran%20Digital%2C%20I%2527d%20like%20a%20quote%20for%20the%20Custom%20Ecosystem%20package%20in%20Benoni" class="btn btn-outline" style="width: 100%;" target="_blank" rel="noopener">Request Quote &rarr;</a>
         </div>
-      
+
     </div>
       </div>
     </section>
@@ -567,17 +567,17 @@
               Our specialized digital engineering and on-site branding units operate across Benoni and adjacent commercial corridors:
             </p>
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem;">
-              
+
                 <span class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); color: var(--dark-950); padding: 6px 14px; font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; box-shadow: 2px 2px 0px var(--dark-950); display: inline-block;">Rynfield</span>
-              
+
                 <span class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); color: var(--dark-950); padding: 6px 14px; font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; box-shadow: 2px 2px 0px var(--dark-950); display: inline-block;">Northmead</span>
-              
+
                 <span class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); color: var(--dark-950); padding: 6px 14px; font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; box-shadow: 2px 2px 0px var(--dark-950); display: inline-block;">Lakefield</span>
-              
+
                 <span class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); color: var(--dark-950); padding: 6px 14px; font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; box-shadow: 2px 2px 0px var(--dark-950); display: inline-block;">Farrarmere</span>
-              
+
                 <span class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); color: var(--dark-950); padding: 6px 14px; font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; box-shadow: 2px 2px 0px var(--dark-950); display: inline-block;">Crystal Park</span>
-              
+
             </div>
             <p style="color: var(--dark-600); font-size: 0.9rem; line-height: 1.6;">
               <strong>Key Transport Corridors:</strong> N12 Freeway, R23, Snake Road, Tom Jones Street
@@ -600,7 +600,7 @@
           <a href="../blog/" class="btn btn-outline">Explore All Articles &rarr;</a>
         </div>
         <div class="reveal reveal-delay-1">
-          
+
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
         <a href="../mobile-apps/" class="card-tactile" style="background: var(--white); border: 2px solid var(--dark-950); padding: 1.5rem; text-decoration: none; display: block; box-shadow: var(--shadow-brutal-sm);">
           <div style="color: var(--accent-blue); font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.25rem;">Mobile Systems</div>
@@ -618,7 +618,7 @@
           <span style="color: var(--accent-blue); font-size: 0.85rem; font-weight: 700;">View Live App Builds &rarr;</span>
         </a>
       </div>
-    
+
         </div>
       </div>
     </section>
@@ -633,7 +633,7 @@
           </h2>
         </div>
         <div class="faq-accordion reveal reveal-delay-1" style="display: flex; flex-direction: column; gap: 1rem;">
-          
+
             <div class="faq-item card-tactile" style="border: var(--border-dark-thick); box-shadow: var(--shadow-brutal-sm); background: var(--white);">
               <button class="faq-question" type="button" style="width: 100%; text-align: left; padding: 1.5rem; font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--dark-950); display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; cursor: pointer;">
                 <span>How much does mobile app development cost in Benoni?</span>
@@ -645,7 +645,7 @@
                 </p>
               </div>
             </div>
-          
+
             <div class="faq-item card-tactile" style="border: var(--border-dark-thick); box-shadow: var(--shadow-brutal-sm); background: var(--white);">
               <button class="faq-question" type="button" style="width: 100%; text-align: left; padding: 1.5rem; font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--dark-950); display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; cursor: pointer;">
                 <span>Do you develop for both iPhone (iOS) and Android?</span>
@@ -657,7 +657,7 @@
                 </p>
               </div>
             </div>
-          
+
             <div class="faq-item card-tactile" style="border: var(--border-dark-thick); box-shadow: var(--shadow-brutal-sm); background: var(--white);">
               <button class="faq-question" type="button" style="width: 100%; text-align: left; padding: 1.5rem; font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--dark-950); display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; cursor: pointer;">
                 <span>Do you handle Apple App Store and Google Play submissions?</span>
@@ -669,7 +669,7 @@
                 </p>
               </div>
             </div>
-          
+
         </div>
       </div>
     </section>

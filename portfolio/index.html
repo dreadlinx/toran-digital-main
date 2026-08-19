@@ -134,11 +134,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
   Our Services
   <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item active" data-target="mega-web" href="../web-design/">
   Website Design
@@ -234,13 +234,13 @@
 </header>
 
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle">
+<button class="mobile-nav-link mobile-services-toggle" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
   Our Services
   <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list">
+<div class="mobile-services-list" id="mobileServicesList">
 <a href="../web-design/">Website Design</a>
 <a href="../mobile-apps/">Mobile Apps</a>
 <a href="../seo-marketing/">SEO &amp; Google Ads</a>
@@ -279,18 +279,18 @@
   <div class="container">
     <!-- Filter Bar -->
     <div class="portfolio-filter-bar">
-      <button class="filter-btn active btn-primary" data-filter="all">All Projects (18)</button>
-      <button class="filter-btn btn-outline" data-filter="web">Web &amp; E-Commerce</button>
-      <button class="filter-btn btn-outline" data-filter="vehicle">Vehicle Wraps (8)</button>
-      <button class="filter-btn btn-outline" data-filter="apps">Mobile Apps</button>
-      <button class="filter-btn btn-outline" data-filter="dstv">DSTV &amp; CCTV</button>
-      <button class="filter-btn btn-outline" data-filter="branding">Graphic Design &amp; Signs</button>
+      <button class="filter-btn active btn-primary" data-filter="all" type="button">All Projects (18)</button>
+      <button class="filter-btn btn-outline" data-filter="web" type="button">Web &amp; E-Commerce</button>
+      <button class="filter-btn btn-outline" data-filter="vehicle" type="button">Vehicle Wraps (8)</button>
+      <button class="filter-btn btn-outline" data-filter="apps" type="button">Mobile Apps</button>
+      <button class="filter-btn btn-outline" data-filter="dstv" type="button">DSTV &amp; CCTV</button>
+      <button class="filter-btn btn-outline" data-filter="branding" type="button">Graphic Design &amp; Signs</button>
     </div>
 
     <div class="portfolio-gallery-grid">
       <!-- Project 1: Elite Innovation E-Commerce -->
       <div class="project-item" data-category="web">
-        <img alt="Elite Innovation E-Commerce Platform Build" src="../assets/website images/eliteinnovation.co.za.webp" loading="lazy" decoding="async">
+        <img alt="Elite Innovation E-Commerce Platform Build" src="../assets/website images/eliteinnovation.co.za.webp" loading="lazy" decoding="async" width="1910" height="937">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">E-Commerce • Next.js</span>
@@ -309,7 +309,7 @@
 
       <!-- Project 2: Germiston Logistics Fleet -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Germiston Logistics Fleet full wrap vinyl" src="../assets/vehicle branding/IMG-20250114-WA0247.webp" loading="lazy" decoding="async">
+        <img alt="Germiston Logistics Fleet full wrap vinyl" src="../assets/vehicle branding/IMG-20250114-WA0247.webp" loading="lazy" decoding="async" width="1280" height="960">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Fleet Wrap • 3M Cast</span>
@@ -328,7 +328,7 @@
 
       <!-- Project 3: Driver Dispatch Mobile App -->
       <div class="project-item" data-category="apps">
-        <img alt="Johannesburg Driver Dispatch Native App Screen" src="../assets/Native android development/denny-muller-HfWA-Axq6Ek-unsplash.webp" loading="lazy" decoding="async">
+        <img alt="Johannesburg Driver Dispatch Native App Screen" src="../assets/Native android development/denny-muller-HfWA-Axq6Ek-unsplash.webp" loading="lazy" decoding="async" width="1920" height="1280">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Mobile App • Kotlin / iOS</span>
@@ -347,7 +347,7 @@
 
       <!-- Project 4: Bold & Beauty Storefront -->
       <div class="project-item" data-category="web">
-        <img alt="Bold and Beauty Storefront Website" src="../assets/website images/boldandbeauty.co.za.webp" loading="lazy" decoding="async">
+        <img alt="Bold and Beauty Storefront Website" src="../assets/website images/boldandbeauty.co.za.webp" loading="lazy" decoding="async" width="1902" height="932">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Shopify • Brand Design</span>
@@ -366,7 +366,7 @@
 
       <!-- Project 5: Full Commercial Van Wrap -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Full commercial van wrap livery" src="../assets/vehicle branding/IMG-20250114-WA0196.webp" loading="lazy" decoding="async">
+        <img alt="Full commercial van wrap livery" src="../assets/vehicle branding/IMG-20250114-WA0196.webp" loading="lazy" decoding="async" width="1280" height="960">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Full Wrap • Avery Cast</span>
@@ -385,7 +385,7 @@
 
       <!-- Project 6: Lovemore Plumbers Corporate Web Hub -->
       <div class="project-item" data-category="web">
-        <img alt="Lovemore Plumbers Corporate Website Build" src="../assets/website images/lovemoreplumbers.co.za.webp" loading="lazy" decoding="async">
+        <img alt="Lovemore Plumbers Corporate Website Build" src="../assets/website images/lovemoreplumbers.co.za.webp" loading="lazy" decoding="async" width="1897" height="934">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">WordPress • Local SEO</span>
@@ -404,7 +404,7 @@
 
       <!-- Project 7: Mobile Truck Clinic Industrial Portal -->
       <div class="project-item" data-category="apps">
-        <img alt="Mobile Truck Clinic Portal" src="../assets/website images/mobiletruckclinic.org.webp" loading="lazy" decoding="async">
+        <img alt="Mobile Truck Clinic Portal" src="../assets/website images/mobiletruckclinic.org.webp" loading="lazy" decoding="async" width="1903" height="942">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Custom Web App • SaaS</span>
@@ -423,7 +423,7 @@
 
       <!-- Project 8: Commercial Bakkie Fleet Branding -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Commercial Bakkie Canopy & Door Vinyl" src="../assets/vehicle branding/IMG-20250114-WA0205.webp" loading="lazy" decoding="async">
+        <img alt="Commercial Bakkie Canopy & Door Vinyl" src="../assets/vehicle branding/IMG-20250114-WA0205.webp" loading="lazy" decoding="async" width="1280" height="960">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Bakkie Branding • Half Wrap</span>
@@ -442,7 +442,7 @@
 
       <!-- Project 9: Commercial CCTV Multi-Cam IP Grid -->
       <div class="project-item" data-category="dstv">
-        <img alt="Commercial CCTV Security Camera Installation" src="../assets/CCTV images/IMG-20260513-WA0265.webp" loading="lazy" decoding="async">
+        <img alt="Commercial CCTV Security Camera Installation" src="../assets/CCTV images/IMG-20260513-WA0265.webp" loading="lazy" decoding="async" width="590" height="1280">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">CCTV Security • 4K IP</span>
@@ -461,7 +461,7 @@
 
       <!-- Project 10: MultiChoice DSTV Explora & TV Flush Mount -->
       <div class="project-item" data-category="dstv">
-        <img alt="Accredited DSTV Satellite Dish Alignment" src="../assets/dstv installation images/IMG-20260513-WA0269.webp" loading="lazy" decoding="async">
+        <img alt="Accredited DSTV Satellite Dish Alignment" src="../assets/dstv installation images/IMG-20260513-WA0269.webp" loading="lazy" decoding="async" width="720" height="1280">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">DSTV • TV Mounting</span>
@@ -480,7 +480,7 @@
 
       <!-- Project 11: DMG 3D Illuminated Storefront Signage -->
       <div class="project-item" data-category="branding">
-        <img alt="DMG 3D Illuminated Storefront Signage Installation" src="../assets/Graphics Design images/dmg-custom-signage-installation.webp" loading="lazy" decoding="async">
+        <img alt="DMG 3D Illuminated Storefront Signage Installation" src="../assets/Graphics Design images/dmg-custom-signage-installation.webp" loading="lazy" decoding="async" width="640" height="868">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Outdoor Signage • 3D LED</span>
@@ -499,7 +499,7 @@
 
       <!-- Project 12: Corporate Identity & Brand Manual -->
       <div class="project-item" data-category="branding">
-        <img alt="Corporate Identity Stationery & Brand Guidelines" src="../assets/cooperate identity/corp ID 1.webp" loading="lazy" decoding="async">
+        <img alt="Corporate Identity Stationery & Brand Guidelines" src="../assets/cooperate identity/corp ID 1.webp" loading="lazy" decoding="async" width="674" height="455">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Brand Design • Vector</span>
@@ -518,7 +518,7 @@
 
       <!-- Project 13: Jet Park Heavy Commercial Fleet -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Jet Park Heavy Commercial Long-Haul Fleet Wrap" src="../assets/vehicle branding/IMG-20250114-WA0245.webp" loading="lazy" decoding="async">
+        <img alt="Jet Park Heavy Commercial Long-Haul Fleet Wrap" src="../assets/vehicle branding/IMG-20250114-WA0245.webp" loading="lazy" decoding="async" width="960" height="1280">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Fleet Livery • 3M Cast</span>
@@ -537,7 +537,7 @@
 
       <!-- Project 14: Security Armed Response Bakkie Fleet -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Security Armed Response Bakkie Vehicle Wrap" src="../assets/vehicle branding/IMG-20250114-WA0253.webp" loading="lazy" decoding="async">
+        <img alt="Security Armed Response Bakkie Vehicle Wrap" src="../assets/vehicle branding/IMG-20250114-WA0253.webp" loading="lazy" decoding="async" width="1280" height="960">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Tactical Livery • High-Vis</span>
@@ -556,7 +556,7 @@
 
       <!-- Project 15: Express Delivery Courier Transit Van -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Express Delivery Courier Transit Van Vinyl Wrap" src="../assets/vehicle branding/IMG-20250114-WA0260.webp" loading="lazy" decoding="async">
+        <img alt="Express Delivery Courier Transit Van Vinyl Wrap" src="../assets/vehicle branding/IMG-20250114-WA0260.webp" loading="lazy" decoding="async" width="1280" height="960">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Full Wrap • UV Shield</span>
@@ -575,7 +575,7 @@
 
       <!-- Project 16: City Deep Cold Chain Refrigerated Trucks -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Refrigerated Logistics Truck Full Livery" src="../assets/vehicle branding/IMG-20250114-WA0265.webp" loading="lazy" decoding="async">
+        <img alt="Refrigerated Logistics Truck Full Livery" src="../assets/vehicle branding/IMG-20250114-WA0265.webp" loading="lazy" decoding="async" width="1280" height="720">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Cold Chain • Anti-Freeze</span>
@@ -594,7 +594,7 @@
 
       <!-- Project 17: Alrode Mobile Field Workshop Livery -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Mobile Service Workshop High-Visibility Vehicle Wrap" src="../assets/vehicle branding/IMG-20250114-WA0278.webp" loading="lazy" decoding="async">
+        <img alt="Mobile Service Workshop High-Visibility Vehicle Wrap" src="../assets/vehicle branding/IMG-20250114-WA0278.webp" loading="lazy" decoding="async" width="1280" height="960">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Workshop Van • Spot + Half</span>
@@ -613,7 +613,7 @@
 
       <!-- Project 18: Corporate Executive Sedan Fleet Branding -->
       <div class="project-item" data-category="vehicle">
-        <img alt="Corporate Sales Fleet Sedan Vehicle Wrap" src="../assets/vehicle branding/IMG-20250114-WA0281.webp" loading="lazy" decoding="async">
+        <img alt="Corporate Sales Fleet Sedan Vehicle Wrap" src="../assets/vehicle branding/IMG-20250114-WA0281.webp" loading="lazy" decoding="async" width="960" height="1280">
         <div class="project-item-body">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
             <span class="section-label" style="margin: 0; font-size: 0.75rem;">Executive Fleet • Subtle Cast</span>

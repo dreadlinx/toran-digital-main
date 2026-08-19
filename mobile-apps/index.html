@@ -39,7 +39,7 @@
       pointer-events: none;
     }
     .content-block { padding: 80px 0; }
-    
+
     .tech-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -241,11 +241,11 @@
 <a href="../">Home</a>
 <!-- Services Mega Dropdown -->
 <div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-trigger" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg aria-hidden="true" class="chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mega-dropdown">
+<div class="mega-dropdown" id="capabilities-menu">
 <div class="mega-dropdown-left">
 <a class="mega-item" data-target="mega-web" href="../web-design/">
                   Website Design
@@ -341,13 +341,13 @@
 </div>
 </header>
 <!-- Mobile Navigation Overlay -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
 <a class="mobile-nav-link" href="../">Home</a>
-<button class="mobile-nav-link mobile-services-toggle open">
+<button class="mobile-nav-link mobile-services-toggle open" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
-<div class="mobile-services-list open">
+<div class="mobile-services-list open" id="mobileServicesList">
 <a href="../web-design/" style="">Website Design</a>
 <a href="./" style="color: var(--teal-600);">Mobile Apps</a>
 <a href="../seo-marketing/" style="">SEO &amp; Google Ads</a>
@@ -390,7 +390,7 @@
 </div>
 <div class="hero-showcase">
 <div class="showcase-card showcase-main">
-<picture><source srcset="../assets/showcase_mobile.webp" type="image/webp"/><img alt="Mobile App Showcase" fetchpriority="high" src="../assets/showcase_mobile.jpg"/ decoding="async"></picture>
+<picture><source srcset="../assets/showcase_mobile.webp" type="image/webp"/><img alt="Mobile App Showcase" fetchpriority="high" src="../assets/showcase_mobile.jpg"/ decoding="async" width="1024" height="1024"></picture>
 <span class="showcase-label">iOS &amp; Android Application</span>
 </div>
 </div>

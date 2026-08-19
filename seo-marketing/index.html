@@ -152,7 +152,7 @@
 <div class="bg-noise-overlay"></div>
     <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- ==================== HEADER ==================== -->
-  
+
 <!-- ==================== TOP UTILITY BAR ==================== -->
 <div class="studio-utility-bar">
   <div class="container">
@@ -182,14 +182,14 @@
 
         <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
           <a href="../">Home</a>
-          
+
           <!-- Services Mega Dropdown -->
           <div class="nav-dropdown">
-            <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false" type="button" aria-controls="capabilities-menu">
               Our Services
               <svg class="chevron-down" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="mega-dropdown">
+            <div class="mega-dropdown" id="capabilities-menu">
               <div class="mega-dropdown-left">
                 <a href="../web-design/" class="mega-item" data-target="mega-web">
                   Website Design
@@ -289,13 +289,13 @@
   </header>
 
   <!-- Mobile Navigation Overlay -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" aria-hidden="true">
     <a href="../" class="mobile-nav-link">Home</a>
-    <button class="mobile-nav-link mobile-services-toggle open">
+    <button class="mobile-nav-link mobile-services-toggle open" type="button" id="mobileServicesToggle" aria-expanded="false" aria-controls="mobileServicesList">
       Our Services
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
     </button>
-    <div class="mobile-services-list open">
+    <div class="mobile-services-list open" id="mobileServicesList">
       <a href="../web-design/" style="">Website Design</a>
       <a href="../mobile-apps/" style="">Mobile Apps</a>
       <a href="./" style="color: var(--teal-600);">SEO & Google Ads</a>
@@ -347,7 +347,7 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  
+
 <section class="section">
   <div class="container">
     <div class="section-header center">
@@ -381,7 +381,7 @@
       <h2 class="section-title">Frequently Asked Questions About SEO in Johannesburg</h2>
       <div class="faq-list">
         <div class="faq-item active">
-          <button class="faq-question">How long does SEO take to show results?
+          <button class="faq-question" type="button">How long does SEO take to show results?
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
@@ -389,7 +389,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">What is the difference between SEO and Google Ads?
+          <button class="faq-question" type="button">What is the difference between SEO and Google Ads?
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
@@ -397,7 +397,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Do you manage Google Business Profiles?
+          <button class="faq-question" type="button">Do you manage Google Business Profiles?
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
@@ -405,7 +405,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">How do you report on SEO progress?
+          <button class="faq-question" type="button">How do you report on SEO progress?
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
@@ -451,7 +451,7 @@
           </ul>
         </div>
 
-        
+
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
@@ -462,7 +462,7 @@
             <li><a href="../blog/dstv-signal-problems/">DSTV Signal Fixes</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-col">
           <h4>Popular Locations</h4>
           <ul>
@@ -491,7 +491,7 @@
     </div>
   </footer>
 
-  
+
 
   <script src="../index.js"></script>
 
